@@ -12,6 +12,9 @@
 		29D8518C1E90A0CA0006618F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D8518A1E90A0CA0006618F /* Main.storyboard */; };
 		29D8518E1E90A0CA0006618F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D8518D1E90A0CA0006618F /* Assets.xcassets */; };
 		29D851911E90A0CA0006618F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D8518F1E90A0CA0006618F /* LaunchScreen.storyboard */; };
+		29D851991E90ED110006618F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29D851981E90ED110006618F /* GoogleService-Info.plist */; };
+		29D851A01E9231B70006618F /* pokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D8519F1E9231B70006618F /* pokeAnnotation.swift */; };
+		74226D4DC0BB7A3576B4B820 /* Pods_pokefinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7D1CFC7A6C640E37349AFF /* Pods_pokefinder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		29D8518D1E90A0CA0006618F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29D851901E90A0CA0006618F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29D851921E90A0CA0006618F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29D851981E90ED110006618F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29D8519F1E9231B70006618F /* pokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokeAnnotation.swift; sourceTree = "<group>"; };
+		4B08C2226EFDC6B46049CA5D /* Pods-pokefinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokefinder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokefinder/Pods-pokefinder.debug.xcconfig"; sourceTree = "<group>"; };
+		8B7D1CFC7A6C640E37349AFF /* Pods_pokefinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokefinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7E2AE0A280241727E4FB818 /* Pods-pokefinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokefinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokefinder/Pods-pokefinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74226D4DC0BB7A3576B4B820 /* Pods_pokefinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110A747D2965A3D1A9B402A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B7D1CFC7A6C640E37349AFF /* Pods_pokefinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29D8517A1E90A0CA0006618F = {
 			isa = PBXGroup;
 			children = (
 				29D851851E90A0CA0006618F /* pokefinder */,
 				29D851841E90A0CA0006618F /* Products */,
+				9489B27D294729662F751319 /* Pods */,
+				110A747D2965A3D1A9B402A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,41 @@
 		29D851851E90A0CA0006618F /* pokefinder */ = {
 			isa = PBXGroup;
 			children = (
+				29D8519E1E9231890006618F /* Controller */,
+				29D8519D1E9231830006618F /* Model */,
 				29D851861E90A0CA0006618F /* AppDelegate.swift */,
-				29D851881E90A0CA0006618F /* ViewController.swift */,
-				29D8518A1E90A0CA0006618F /* Main.storyboard */,
 				29D8518D1E90A0CA0006618F /* Assets.xcassets */,
-				29D8518F1E90A0CA0006618F /* LaunchScreen.storyboard */,
+				29D851981E90ED110006618F /* GoogleService-Info.plist */,
 				29D851921E90A0CA0006618F /* Info.plist */,
+				29D8518A1E90A0CA0006618F /* Main.storyboard */,
+				29D8518F1E90A0CA0006618F /* LaunchScreen.storyboard */,
 			);
 			path = pokefinder;
+			sourceTree = "<group>";
+		};
+		29D8519D1E9231830006618F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				29D8519F1E9231B70006618F /* pokeAnnotation.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		29D8519E1E9231890006618F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				29D851881E90A0CA0006618F /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9489B27D294729662F751319 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B08C2226EFDC6B46049CA5D /* Pods-pokefinder.debug.xcconfig */,
+				E7E2AE0A280241727E4FB818 /* Pods-pokefinder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +117,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D851951E90A0CB0006618F /* Build configuration list for PBXNativeTarget "pokefinder" */;
 			buildPhases = (
+				DEC0E8CE3153D8305E99A3A8 /* [CP] Check Pods Manifest.lock */,
 				29D8517F1E90A0CA0006618F /* Sources */,
 				29D851801E90A0CA0006618F /* Frameworks */,
 				29D851811E90A0CA0006618F /* Resources */,
+				103E927D9BFEFB46ADE88C4B /* [CP] Embed Pods Frameworks */,
+				CDB86139797687AD77B8F87A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29D851911E90A0CA0006618F /* LaunchScreen.storyboard in Resources */,
+				29D851991E90ED110006618F /* GoogleService-Info.plist in Resources */,
 				29D8518E1E90A0CA0006618F /* Assets.xcassets in Resources */,
 				29D8518C1E90A0CA0006618F /* Main.storyboard in Resources */,
 			);
@@ -131,11 +181,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		103E927D9BFEFB46ADE88C4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pokefinder/Pods-pokefinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDB86139797687AD77B8F87A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pokefinder/Pods-pokefinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEC0E8CE3153D8305E99A3A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		29D8517F1E90A0CA0006618F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D851A01E9231B70006618F /* pokeAnnotation.swift in Sources */,
 				29D851891E90A0CA0006618F /* ViewController.swift in Sources */,
 				29D851871E90A0CA0006618F /* AppDelegate.swift in Sources */,
 			);
@@ -256,6 +355,7 @@
 		};
 		29D851961E90A0CB0006618F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B08C2226EFDC6B46049CA5D /* Pods-pokefinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pokefinder/Info.plist;
@@ -268,6 +368,7 @@
 		};
 		29D851971E90A0CB0006618F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7E2AE0A280241727E4FB818 /* Pods-pokefinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = pokefinder/Info.plist;
@@ -297,6 +398,7 @@
 				29D851971E90A0CB0006618F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
